@@ -1,1 +1,165 @@
-under construction...
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Charig Yang</title>
+  
+  <meta name="author" content="Charig Yang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!--<link rel="icon" type="image/png" href="images/seal_icon.png">-->
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Charig Yang</name>
+              </p>
+              <p>I am a first-year PhD student in <a href="https://aims.robots.ox.ac.uk/">Autonomous Intelligent Machines and Systems</a> at University of Oxford, generously funded by <a href="https://epsrc.ukri.org/">EPSRC</a> and <a href="https://aims.robots.ox.ac.uk/">AIMS</a>. 
+              </p>
+              <p>
+                I did my undergraduate in Engineering Science, also at Oxford. During which, I spent lovely summers at <a href="https://www.jreast.co.jp/e/">Japan Railways</a>, <a href="https://www.metaswitch.com/">Metaswitch</a>, <a href="https://www3.truecorp.co.th/new/">True</a>, <a href="https://www.cpgroupglobal.com/">CP Group</a>, and <a href="https://www.cpgroupglobal.com/">Oxford’s Engineering Department</a>.
+              </p>
+              <p>
+                Prior to which, I was born and raised in the suburbs of Bangkok, Thailand, and had my pre-university education in Singapore.
+              </p>
+
+              <p style="text-align:center">
+                <a href="mailto:charig@robots.ox.ac.uk">Email</a> &nbsp/&nbsp
+                <a href="res/cv.pdf">CV</a> &nbsp/&nbsp
+                <!--<a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Google Scholar</a> &nbsp/&nbsp-->
+                <a href="https://twitter.com/chaaarig">Twitter</a> &nbsp/&nbsp
+                <a href="https://github.com/charigyang/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="res/pp.jpg" class="hoverZoomLink">
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
+              <p>
+                I currently work on computer vision (i.e. how computers understand images), specifically in self-supervised learning (i.e. how to do so without requiring expensive annotations).
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="mogroup_stop()" onmouseover="mogroup_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <br>
+                <div class="two" id='mogroup_image'><video width=160 muted autoplay loop>
+                <source src="res/motiongroup.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='res/mogroup.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function mogroup_start() {
+                  document.getElementById('mogroup_image').style.opacity = "1";
+                }
+
+                function mogroup_stop() {
+                  document.getElementById('mogroup_image').style.opacity = "0";
+                }
+                mogroup_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://charigyang.github.io/motiongroup/">
+                <papertitle>Self-supervised Video Object Segmentation by Motion Grouping</papertitle>
+              </a>
+              <br>
+              <strong>Charig Yang</strong>,
+              <a href="https://twitter.com/hala_lamdouar/">Hala Lamdouar</a>,
+              <a href="https://erikalu.com/">Erika Lu</a>,
+              <a href="hhttps://www.robots.ox.ac.uk/~az/">Andrew Zisserman</a>,
+              <a href="https://weidixie.github.io/weidi-personal-webpage/">Weidi Xie</a>
+              <br>
+              <em>Under review.</em><!--, 2021-->
+              <br>
+              <a href="https://charigyang.github.io/motiongroup/">project page</a> /
+              <a href="https://charigyang.github.io/motiongroup/">arXiv</a>
+              <p></p>
+              <p>We use transformers to segment optical flow fields into layers, resulting in self-supervised segmentation.</p>
+            </td>
+          </tr>
+
+          <tr onmouseout="moca_stop()" onmouseover="moca_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <br>
+                <div class="two" id='moca_image'><video  width=160 muted autoplay loop>
+                <source src="res/moca.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='res/moca.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function moca_start() {
+                  document.getElementById('moca_image').style.opacity = "1";
+                }
+
+                function moca_stop() {
+                  document.getElementById('moca_image').style.opacity = "0";
+                }
+                moca_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://www.robots.ox.ac.uk/~vgg/data/MoCA/">
+                <papertitle>Betrayed by Motion: Camouflaged Object Discovery via Motion Segmentation</papertitle>
+              </a>
+              <br>
+              <a href="https://twitter.com/hala_lamdouar/">Hala Lamdouar</a>,
+              <strong>Charig Yang</strong>,
+              <a href="https://weidixie.github.io/weidi-personal-webpage/">Weidi Xie</a>,
+              <a href="hhttps://www.robots.ox.ac.uk/~az/">Andrew Zisserman</a>
+              <br>
+              <em>ACCV</em>, 2020
+              <br>
+              <a href="https://www.robots.ox.ac.uk/~vgg/data/MoCA/">project page</a> /
+              <a href="https://arxiv.org/abs/2011.11630">arXiv</a>
+              <p></p>
+              <p>We consider the task of camouflaged animal discovery and present a large-scale video camouflage dataset.</p>
+            </td>
+          </tr>
+
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Teaching</heading>
+              <p>
+                I teach tutorial classes undergraduates for P2 Electronic and Information Engineering, A1 Mathematics, C19 Machine Learning at Exeter and St. Peter's Colleges. You can find my summary notes for all P and A modules, and some B modules <a href="https://www.dropbox.com/home/Engineering%20Finals%20Part%20A%20(2017-18)">here</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                Template gratefully stolen from <a href="https://jonbarron.info/">here</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
