@@ -68,7 +68,27 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          
+            <tr onmouseout="time_stop()" onmouseover="time_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <br>
+                <div class="two" id='time_image'><video width=160 muted autoplay loop>
+                <source src="res/time.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='res/time.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function time_start() {
+                  document.getElementById('time_image').style.opacity = "1";
+                }
+
+                function time_stop() {
+                  document.getElementById('time_image').style.opacity = "0";
+                }
+                time_stop()
+              </script>
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://charigyang.github.io/abouttime/">
                 <papertitle>It's About Time: Analog clock Reading in the Wild</papertitle>
