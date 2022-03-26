@@ -1,0 +1,7 @@
+@inproceedings{feng2021exploring,
+  title={Exploring classification equilibrium in long-tailed object detection},
+  author={Feng, Chengjian and Zhong, Yujie and Huang, Weilin},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={3417--3426},
+  year={2021}
+}

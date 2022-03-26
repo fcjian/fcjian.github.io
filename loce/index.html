@@ -127,16 +127,16 @@
 
   gtag('config', 'G-WJFX2BFB9X');
 </script>
-	<title>TOOD: Task-aligned One-stage Object Detection</title>
+	<title>Exploring Classification Equilibrium in Long-Tailed Object Detection</title>
 	<meta property="og:image" content="./resources/overview.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="TOOD: Task-aligned One-stage Object Detection" />
-	<meta property="og:description" content="C. Feng, Y Zhong, Y. Gao, M. Scott, W. Huang" />
+	<meta property="og:title" content="Exploring Classification Equilibrium in Long-Tailed Object Detection" />
+	<meta property="og:description" content="C. Feng, Y Zhong, W. Huang" />
 </head>
 
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">TOOD: Task-aligned One-stage Object Detection</span>
+		<span style="font-size:36px">Exploring Classification Equilibrium in Long-Tailed Object Detection</span>
 		<br>
 		<br>
 		<table align=center width=1000px>
@@ -160,31 +160,10 @@
 					</td>					
 					<td align=center width=200px>
 						<center>
-							<span style="font-size:22px"><a href="">
-							Yu Gao</a></span>
-							<br>
-							<span style="font-size:22px">ByteDance Inc.</span>
-						</center>
-					</td>
-				</tr>
-			</table>
-			<table align=center width=500px>
-				<tr>
-					<td align=center width=200px>
-						<center>
-							<span style="font-size:22px"><a href="">
-							Matthew R. Scott</a></span>
-							<br>
-							<span style="font-size:22px">Malong LLC</span>
-						</center>
-					</td>
-
-					<td align=center width=200px>
-						<center>
 							<span style="font-size:22px"><a href="http://whuang.org/">
 							Weilin Huang</a></span>
 							<br>
-							<span style="font-size:22px">Alibaba Group</span>
+							<span style="font-size:22px">Tao Technology, Alibaba Group</span>
 						</center>
 					</td>
 				</tr>
@@ -195,10 +174,7 @@
 				<tr>
 					<td align=center width=500px>
 						<center>
-							<span style="font-size:22px">
-								<em>ICCV</em> 2021
-								<font color="red"><strong>(Oral)</strong></font>
-							</span>
+							<span style="font-size:22px"><em>ICCV</em> 2021</span>
 						</center>
 					</td>
 				</tr>
@@ -208,8 +184,8 @@
 				<br>
 				<tr>
 					<span style="font-size:22px">
-						<a href="https://arxiv.org/abs/2108.07755">ArXiv</a> |
-						<a href="https://github.com/fcjian/TOOD">Code</a> |
+						<a href="https://arxiv.org/abs/2108.07507">ArXiv</a> |
+						<a href="https://github.com/fcjian/LOCE">Code</a> |
 						<a href="./resources/bibtex.txt">Bibtex</a><br>
 					</span>
 				</tr>
@@ -222,7 +198,7 @@
 			<tr>
 				<td width=1000px>
 					<center>
-						<img src="./resources/overview.png" alt="clean-usnob" width="550" height="450">
+						<img src="./resources/overview.png" alt="clean-usnob" width="1000">
 					</center>
 				</td>
 			</tr>
@@ -244,7 +220,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				One-stage object detection is commonly implemented by optimizing two sub-tasks: object classification and localization, using heads with two parallel branches, which might lead to a certain level of spatial misalignment in predictions between the two tasks. In this work, we propose a Task-aligned One-stage Object Detection (TOOD) that explicitly aligns the two tasks in a learning-based manner. First, we design a novel Task-aligned Head (T-Head) which offers a better balance between learning task-interactive and task-specific features, as well as a greater flexibility to learn the alignment via a task-aligned predictor. Second, we propose Task Alignment Learning (TAL) to explicitly pull closer (or even unify) the optimal anchors for the two tasks during training via a designed sample assignment scheme and a task-aligned loss. Extensive experiments are conducted on MS-COCO, where TOOD achieves a <em>51.1 AP</em> at single-model single-scale testing. This surpasses the recent one-stage detectors by a large margin, such as ATSS (47.7 AP), GFL (48.2 AP), and PAA (49.0 AP), with fewer parameters and FLOPs. Qualitative results also demonstrate the effectiveness of TOOD for better aligning the tasks of object classification and localization.
+				The conventional detectors tend to make imbalanced classification and suffer performance drop, when the distribution of the training data is severely skewed. In this paper, we propose to use the mean classification score to indicate the classification accuracy for each category during training. Based on this indicator, we balance the classification via an Equilibrium Loss (EBL) and a Memory-augmented Feature Sampling (MFS) method. Specifically, EBL increases the intensity of the adjustment of the decision boundary for the weak classes by a designed score-guided loss margin between any two classes. On the other hand, MFS improves the frequency and accuracy of the adjustments of the decision boundary for the weak classes through over-sampling the instance features of those classes. Therefore, EBL and MFS work collaboratively for finding the classification equilibrium in long-tailed detection, and dramatically improve the performance of tail classes while maintaining or even improving the performance of head classes. We conduct experiments on LVIS using Mask R-CNN with various backbones including ResNet-50-FPN and ResNet-101-FPN to show the superiority of the proposed method. It improves the detection performance of tail classes by 15.6 AP, and outperforms the most recent long-tailed object detectors by more than 1 AP.
 			</td>
 		</tr>
 	</table>
@@ -253,12 +229,12 @@
 	<hr>
 	<center><h1>Results</h1></center>
 
-	<table align=center width=750px>
+	<table align=center width=1000px>
 		<center>
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:750px" src="./resources/quantitative_result.png"/></td>
+					<img class="round" style="width:1000px" src="./resources/quantitative_result.png"/>
 				</center>
 				</td>
 			</tr>
@@ -274,7 +250,7 @@
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:1000px" src="./resources/qualitative_result.png"/></td>
+					<img src="./resources/qualitative_result.png" alt="clean-usnob" width="600">
 				</center>
 				</td>
 			</tr>
@@ -470,13 +446,11 @@
 		<center><h1>Publication</h1></center>
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./res/paper.png"/></a></td>
-			<td><span style="font-size:14pt">C. Feng, Y Zhong, Y. Gao, M. Scott, W. Huang<br>
-				<b>TOOD: Task-aligned One-stage Object Detection</b><br>
-				<em>ICCV</em> 2021
-				<font color="red"><strong>(Oral)</strong></font>
-				<br>
-				<a href="https://arxiv.org/abs/2108.07755">ArXiv</a> |
-				<a href="https://github.com/fcjian/TOOD">Code</a> |
+			<td><span style="font-size:14pt">C. Feng, Y Zhong, W. Huang<br>
+				<b>Exploring Classification Equilibrium in Long-Tailed Object Detection</b><br>
+				<em>ICCV</em> 2021<br>
+				<a href="https://arxiv.org/abs/2108.07507">ArXiv</a> |
+				<a href="https://github.com/fcjian/LOCE">Code</a> |
 				<a href="./resources/bibtex.txt">Bibtex</a><br>
 				<br>
 				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
