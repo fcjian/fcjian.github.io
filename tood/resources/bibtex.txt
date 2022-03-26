@@ -1,0 +1,8 @@
+@inproceedings{feng2021tood,
+  title={Tood: Task-aligned one-stage object detection},
+  author={Feng, Chengjian and Zhong, Yujie and Gao, Yu and Scott, Matthew R and Huang, Weilin},
+  booktitle={2021 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages={3490--3499},
+  year={2021},
+  organization={IEEE Computer Society}
+}
