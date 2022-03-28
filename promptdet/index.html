@@ -278,7 +278,7 @@
 	<table align=center width=850px>
 		<tr>
 			<td>
-				LVIS is a large-vocabulary object detection dataset, where the frequent and common classes are treated as <em>base</em> categories (referred as LVIS-base), and the rare classes as the <em>novel</em> categories. We also use an external dataset, LAION-400M, which consists of 400 million image-text pairs filtered by pre-trained CLIP. We search for the images by using its 64G KNN indices and download about 300 images for each novel category (referred as LAION-novel). We directly evaluate on MS-COCO, which contains 80 categories, with only 59 categories covered by LVIS-base.
+				LVIS is a large-vocabulary object detection dataset, where the frequent and common classes are treated as <em>base</em> categories (referred as LVIS-base), and the rare classes as the <em>novel</em> categories. We also use an external dataset, LAION-400M, which consists of 400 million image-text pairs filtered by pre-trained CLIP. We search for the images by using its 64G KNN indices and download about 300 images for each novel category (referred as LAION-novel). We conduct training on both LVIS-base and LAION-novel, and evaluation on LVIS and MS-COCO minival sets. Specifically, MS-COCO contains 80 categories, with only 59 categories covered by LVIS-base and LAION-novel.
 			</td>
 		</tr>
 	</table>
@@ -305,6 +305,17 @@
 				<td>
 				<center>
 					<td><img class="round" style="width:750px" src="./resources/quantitative_result.png"/></td>
+				</center>
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=750px>
+		<center>
+			<tr>
+				<td>
+				<center>
+					<td><img class="round" style="width:750px" src="./resources/quantitative_result_coco.png"/></td>
 				</center>
 				</td>
 			</tr>
