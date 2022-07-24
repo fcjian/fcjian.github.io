@@ -1,5 +1,5 @@
 @inproceedings{feng2022promptdet,
-    title={PromptDet: Expand Your Detector Vocabulary with Uncurated Images},
+    title={PromptDet: Towards Open-vocabulary Detection using Uncurated Images},
     author={Feng, Chengjian and Zhong, Yujie and Jie, Zequn and Chu, Xiangxiang and Ren, Haibing and Wei, Xiaolin and Xie, Weidi and Ma, Lin},
     booktitle={Proceedings of the European Conference on Computer Vision},
     year={2022}

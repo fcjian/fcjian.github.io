@@ -127,9 +127,9 @@
 
   gtag('config', 'G-WJFX2BFB9X');
 </script>
-	<title>PromptDet: Expand Your Detector  Vocabulary with Uncurated Images</title>
+	<title>PromptDet: Towards Open-vocabulary Detection using Uncurated Images</title>
 	<meta property="og:image" content="./resources/overview.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="PromptDet: Expand Your Detector  Vocabulary with Uncurated Images" />
+	<meta property="og:title" content="PromptDet: Towards Open-vocabulary Detection using Uncurated Images" />
 	<meta property="og:description" content="C. Feng, Y. Zhong, Z. Jie, X. Chu, H. Ren, X. Wei, W. Xie, L. Ma" />
 </head>
 
@@ -144,8 +144,8 @@
 			<tr>
 				<td align=center >
 					<center>
-						<span style="font-size:22px">
-							<span style="font-size:22px">old title: PromptDet: Expand Your Detector  Vocabulary with Uncurated Images</span>
+						<span style="font-size:23px">
+							<span style="font-size:23px">old title: PromptDet: Expand Your Detector  Vocabulary with Uncurated Images</span>
 						</span>
 					</center>
 				</td>
@@ -281,7 +281,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				The goal of this work is to establish a scalable pipeline for expanding an object detector towards novel/unseen categories, using <i>zero manual annotations</i>. To achieve that, we make the following four contributions: (i) in pursuit of generalisation, we propose a two-stage open-vocabulary object detector that categorises each box proposal by a classifier generated from the text encoder of a pre-trained visual-language model; (ii) To pair the visual latent space (from RPN box proposal) with that of the pre-trained text encoder, we propose the idea of regional prompt learning to optimise a couple of learnable prompt vectors, converting the textual embedding space to fit those visually object-centric images; (iii) To scale up the learning procedure towards detecting a wider spectrum of objects, we exploit the available online resource, iteratively updating the prompts, and later self-training the proposed detector with pseudo labels generated on a large corpus of noisy, uncurated web images. The self-trained detector, termed as <b>PromptDet</b>, significantly improves the detection performance on categories for which manual annotations are unavailable or hard to obtain, e.g. rare categories. Finally, (iv) to validate the necessity of our proposed components, we conduct extensive experiments on the challenging LVIS and MS-COCO dataset, showing superior performance over existing approaches with <i>fewer additional training images</i> and <i>zero manual annotations</i> whatsoever.
+				The goal of this work is to establish a scalable pipeline for expanding an object detector towards novel/unseen categories, using <i>zero manual annotations</i>. To achieve that, we make the following four contributions: (i) in pursuit of generalisation, we propose a two-stage open-vocabulary object detector, where the class-agnostic object proposals are classified with a text encoder from pre-trained visual-language model; (ii) To pair the visual latent space (of RPN box proposals) with that of the pre-trained text encoder, we propose the idea of regional prompt learning to align the textual embedding space with regional visual object features; (iii) To scale up the learning procedure towards detecting a wider spectrum of objects, we exploit the available online resource via a novel self-training framework, which allows to train the proposed detector on a large corpus of noisy uncurated web images. Lastly, (iv) to evaluate our proposed detector, termed as <b>PromptDet</b>, we conduct extensive experiments on the challenging LVIS and MS-COCO dataset. PromptDet shows superior performance over existing approaches with <i>fewer additional training images</i> and <i>zero manual annotations</i> whatsoever.
 			</td>
 		</tr>
 	</table>
@@ -293,7 +293,7 @@
 	<table align=center width=850px>
 		<tr>
 			<td>
-				A summary of dataset statistics. LVIS is a large-vocabulary object detection dataset, where the frequent and common classes are treated as <em>base</em> categories (referred as LVIS-base), and the rare classes as the <em>novel</em> categories. We also use an external dataset, LAION-400M, which consists of 400 million image-text pairs filtered by pre-trained CLIP. We search for the images by using its 64G KNN indices and download about 300 images for each novel category (referred as LAION-novel). We conduct training on both LVIS-base and LAION-novel, and evaluation on LVIS and MS-COCO validation sets. Specifically, MS-COCO contains 80 categories, with only 59 categories covered by LVIS-base.
+				A summary of dataset statistics on open-vocabulary LVIS benchmark. LVIS is a large-vocabulary object detection dataset, where the frequent and common classes are treated as <em>base</em> categories (referred as LVIS-base), and the rare classes as the <em>novel</em> categories. We also use an external dataset, LAION-400M, which consists of 400 million image-text pairs filtered by pre-trained CLIP. We search for the images by using its 64G KNN indices and download about 300 images for each novel category (referred as LAION-novel). We conduct training on both LVIS-base and LAION-novel, and evaluation on the LVIS validation set.
 			</td>
 		</tr>
 	</table>
@@ -318,7 +318,7 @@
 	<table align=center width=850px>
 		<tr>
 			<td>
-				<b>R1</b>: Compare with SOTA open-vocabulary object detectors on the LVIS v1.0 validation set.
+				<b>R1</b>: Compare with SOTA open-vocabulary object detectors on the LVIS benchmark.
 			</td>
 		</tr>
 	</table>
@@ -327,7 +327,7 @@
 			<tr>
 				<td>
 				<center>
-					<td><img class="round" style="width:750px" src="./resources/quantitative_result.png"/></td>
+					<td><img class="round" style="width:750px" src="./resources/quantitative_result_lvis.png"/></td>
 				</center>
 				</td>
 			</tr>
@@ -338,7 +338,7 @@
 	<table align=center width=850px>
 		<tr>
 			<td>
-				<b>R2</b>: Generalisation from LVIS-base to MS-COCO with different prompts.
+				<b>R2</b>: Compare with SOTA open-vocabulary object detectors on the MS-COCO benchmark.
 			</td>
 		</tr>
 	</table>
@@ -348,6 +348,26 @@
 				<td>
 				<center>
 					<td><img class="round" style="width:750px" src="./resources/quantitative_result_coco.png"/></td>
+				</center>
+				</td>
+			</tr>
+		</center>
+	</table>
+
+	<br>
+	<table align=center width=850px>
+		<tr>
+			<td>
+				<b>R3</b>: Generalisation from LVIS-base to MS-COCO with different prompts.
+			</td>
+		</tr>
+	</table>
+	<table align=center width=750px>
+		<center>
+			<tr>
+				<td>
+				<center>
+					<td><img class="round" style="width:750px" src="./resources/quantitative_result_lvis2coco.png"/></td>
 				</center>
 				</td>
 			</tr>
@@ -578,7 +598,7 @@
 		<tr>
 			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
 			<td><span style="font-size:14pt">C. Feng, Y. Zhong, Z. Jie, X. Chu, H. Ren, X. Wei, W. Xie, L. Ma<br>
-				<b>PromptDet: Expand Your Detector  Vocabulary with Uncurated Images</b><br>
+				<b>PromptDet: Towards Open-vocabulary Detection using Uncurated Images</b><br>
 				<em>ECCV</em> 2022
 				<br>
 				<a href="https://arxiv.org/abs/2203.16513">ArXiv</a> |
