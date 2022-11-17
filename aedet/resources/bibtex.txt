@@ -1,0 +1,6 @@
+@inproceedings{feng2022aedet,
+    title={AeDet: Azimuth-invariant Multi-view 3D Object Detection},
+    author={Feng, Chengjian and Jie, Zequn and Zhong, Yujie and Chu, Xiangxiang and Ma, Lin},
+    journal={arXiv preprint arXiv},
+    year={2022}
+}
