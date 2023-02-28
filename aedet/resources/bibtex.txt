@@ -1,6 +1,6 @@
-@inproceedings{feng2022aedet,
+@inproceedings{feng2023aedet,
     title={AeDet: Azimuth-invariant Multi-view 3D Object Detection},
     author={Feng, Chengjian and Jie, Zequn and Zhong, Yujie and Chu, Xiangxiang and Ma, Lin},
-    journal={arXiv preprint arXiv:2211.12501},
-    year={2022}
+    booktitle={Proceedings of the IEEE / CVF Computer Vision and Pattern Recognition},
+    year={2023}
 }
