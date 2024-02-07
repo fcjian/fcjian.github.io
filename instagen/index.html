@@ -254,6 +254,28 @@
 		</tr>
 	</table>
 	<br>
+
+	<hr>
+	<center><h1>Methodology</h1></center>
+
+	<table align=center width=850px>
+		<tr>
+			<td>
+				To simultaneously generate the images and object bounding boxes, we propose a novel instance-level grounding module, which aligns the text embedding of category name with the regional visual features from image synthesizer on a real dataset, and infers the coordinates for the objects in synthetic images. To further improve the alignment towards objects of arbitrary category, we adopt self-training to tune the grounding module on object categories not existing in the real dataset. As a result, the proposed model, termed as InstaGen, can automatically generate images along with bounding boxes for object instances, and construct synthetic dataset at scale, leading to improved ability when training detectors on it.
+			</td>
+		</tr>
+	</table>
+	<table align=center width=750px>
+		<center>
+			<tr>
+				<td>
+				<center>
+					<td><img class="round" style="width:850px" src="./resources/method.png"/></td>
+				</center>
+				</td>
+			</tr>
+		</center>
+	</table>
 	
 	<hr>
 	<center><h1>Visualizations</h1></center>
